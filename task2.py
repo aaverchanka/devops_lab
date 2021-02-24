@@ -3,7 +3,7 @@ def task2():
     arr1 = parser_to_int_array(input())
     arr2 = parser_to_int_array(input())
     for i in range(len(arr1)):
-        if i > (len(arr2)-1):
+        if i > (len(arr2) - 1):
             result_dict[arr1[i]] = None
         else:
             result_dict[arr1[i]] = arr2[i]
