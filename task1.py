@@ -91,4 +91,3 @@ class Monitoring:
             count_snapshot += 1
             self.write_to_file(count_snapshot)
             time.sleep(args.minutes * 60)
-
