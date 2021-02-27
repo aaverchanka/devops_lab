@@ -31,8 +31,8 @@ class Monitoring:
     def get_monitor_network(self):
         network = psutil.net_io_counters()
         return {
-            'network.mb_sent': '%.2fMB' % (network.bytes_sent/1024/1024),
-            'network.mb_rec': '%.2fMB' % (network.bytes_recv/1024/1024)
+            'network.mb_sent': '%.2fMB' % (network.bytes_sent / 1024 / 1024),
+            'network.mb_rec': '%.2fMB' % (network.bytes_recv / 1024 / 1024)
         }
 
     # Argument parser
@@ -92,9 +92,11 @@ class Monitoring:
             self.write_to_file(count_snapshot)
             time.sleep(args.minutes * 60)
 
+
 def main():
     m = Monitoring()
     m.start_monitoring()
+
 
 if __name__ == '__main__':
     main()
