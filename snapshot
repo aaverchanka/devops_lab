@@ -1,5 +1,0 @@
-#!/usr/bin/env python
-import task1
-
-task1 = task1.Monitoring()
-task1.start_monitoring()
