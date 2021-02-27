@@ -6,8 +6,8 @@ setup(
     entry_points={
         "console_scripts": [
             "snapshot = snapshot.task1:main",
-            ],
-        },
+        ],
+    },
     install_requires=[
         'psutil',
         'argparse'
