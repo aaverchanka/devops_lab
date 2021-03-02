@@ -11,8 +11,9 @@ def get_pulls(state):
 def get_accept_need_work_events(current_state):
     result_array = []
     all_params = {'per_page': 100}
-    response = requests.get('https://api.github.com/repos/alenaPy/devops_\
-                            lab/pulls', auth=('user', 'password'), params=all_params)
+    response = requests.get(
+        'https://api.github.com/repos/alenaPy/devops_lab/pulls', 
+        auth=('user', 'password'), params=all_params)
 
     for item in response.json():
         label = item['labels']
@@ -28,8 +29,9 @@ def get_accept_need_work_events(current_state):
 def get_open_close_events(current_state):
     result_array = []
     all_params = {'state': current_state, 'per_page': 100}
-    response = requests.get('https://api.github.com/repos/alenaPy/devops_lab\
-                            /pulls', auth=('user', 'password'), params=all_params)
+    response = requests.get(
+        'https://api.github.com/repos/alenaPy/devops_lab/pulls', 
+        auth=('user', 'password'), params=all_params)
 
     for item in response.json():
         result_array.append(parse_response_item(item))
