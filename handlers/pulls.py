@@ -9,9 +9,9 @@ def get_pulls(state):
 
 
 def get_response(all_params):
-    return requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls\
-                        ', auth=('user', 'password'),
-                        params=all_params).json()
+    return requests.get(
+        'https://api.github.com/repos/alenaPy/devops_lab/pulls', 
+        auth=('user', 'password'), params=all_params).json()
 
 
 def get_accept_need_work_events(current_state, get_resp):
