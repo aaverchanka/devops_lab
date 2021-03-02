@@ -30,6 +30,5 @@ class TestPrime(TestCase):
 
     def get_mock_response(self, params):
         mock_label = {'name': 'need works'}
-        mock_item_dict = {'number': 444, 'title': 'title', '_links\
-                            ': self.mock_html, 'labels': [mock_label]}
+        mock_item_dict = {'number': 444, 'title': 'title', '_links': self.mock_html, 'labels': [mock_label]}
         return [mock_item_dict]
