@@ -25,10 +25,8 @@ class TestPrime(TestCase):
         result = pulls.get_accept_need_work_events('need works', self.get_mock_response)
         self.assertEqual(result, [self.mock_expected_result])
 
-
     def tearDown(self):
         """Finish"""
-
 
     def get_mock_response(self, params):
         mock_label = {'name': 'need works'}
